@@ -93,14 +93,18 @@ h2 {
 .portfolio-picture {
     border: 1px solid var(--portfolio-picture-border-color);
     margin-bottom: 30px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color;
 
 }
 
 .portfolio-picture:hover, .portfolio-picture:focus {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color;
 }
 
 .portfolio-picture-text {
@@ -178,9 +182,9 @@ h2 {
     color: var(--button-text-color);
     cursor: pointer;
     font-size: 16px;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition-property: color, background-color;
 }
 
 .order-button {
@@ -195,23 +199,25 @@ h2 {
 .button:hover, .button:focus {
     background-color: var(--button-active-color);
     color: var(--button-active-text-color);
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, background-color;
 }
 
 .link {
     color: var(--link-color);
     text-decoration: none;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition-property: color, fill;
 }
 
 .link:hover, .link:focus {
     color: var(--link-active-color);
     fill: var(--link-active-color);
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, fill;
 }
 
 .header-link {
@@ -240,15 +246,16 @@ h2 {
     padding: 6px 22px;
     margin: 0 3px;
     border-radius: var(--button-border-radius);
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition-property: box-shadow;
 }
 
-.portfolio-navigation:hover .portfolio-navigation:focus {
+.portfolio-navigation:hover, .portfolio-navigation:focus {
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12);
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow;
 
 }
 
@@ -328,6 +335,9 @@ h2 {
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
 }
 
 .footer-social .social {
@@ -336,8 +346,9 @@ h2 {
 
 .social-icon:hover > .social, .social-icon:focus > .social {
     fill: white;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
 }
 
 .social-icon {
@@ -347,15 +358,17 @@ h2 {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
 }
 
 .social-icon:hover, .social-icon:focus {
     background-color: #2196F3;
     cursor: pointer;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
 }
 
 .social-container {
@@ -373,16 +386,18 @@ h2 {
     align-items: center;
     justify-content: center;
     fill: #AFB1B8;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color, fill;
 }
 
-.client-image-box:hover .client-image-box:focus {
+.client-image-box:hover, .client-image-box:focus {
     border-color: #2196F3;
     fill: #2196F3;
     cursor: pointer;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color, fill;
 }
 
 .clients-container {
@@ -409,14 +424,16 @@ h2 {
 
 .footer .social-icon {
     background-color: rgb(255, 255, 255, 10%);
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
 }
 
-.footer .social-icon:hover .social-icon:focus {
+.footer .social-icon:hover, .social-icon:focus {
     background-color: #2196F3;
-    transition-delay: 250ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
 }
 
 .footer .social-container {
@@ -429,4 +446,22 @@ h2 {
     height: var(--header-height);
     max-width: 1600px;
     background-image: url("./../images/Img Overlay.png"), url("./../images/tełko.jpg");
+    margin: 0 auto;
+}
+
+.job-text {
+    color: #FFFFFF;
+    font-size: 14px;
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    left: 0;
+    text-align: center;
+    padding: 27px 0;
+}
+
+.job-element {
+    position: relative;
 }
