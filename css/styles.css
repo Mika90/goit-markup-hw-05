@@ -70,11 +70,16 @@ h2 {
     padding-bottom: 94px;
 }
 
+.header {
+    border-bottom: 1px solid var(--header-container-border-color);
+    height: 80px;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--header-container-border-color);
+    height: 100%
 }
 
 .flexbox-header {
@@ -82,17 +87,20 @@ h2 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: var(--header-height);
-    background-image: url("./../images/Img Overlay.png"), url("./../images/tełko.jpg");
+
 }
 
 .portfolio-picture {
     border: 1px solid var(--portfolio-picture-border-color);
     margin-bottom: 30px;
+
 }
 
-.portfolio-picture:hover {
+.portfolio-picture:hover, .portfolio-picture:focus {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-picture-text {
@@ -139,7 +147,6 @@ h2 {
 
 .our-team-container {
     background-color: var(--our-team-container-color);
-
 }
 
 .our-team-image {
@@ -171,6 +178,8 @@ h2 {
     color: var(--button-text-color);
     cursor: pointer;
     font-size: 16px;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -186,16 +195,23 @@ h2 {
 .button:hover, .button:focus {
     background-color: var(--button-active-color);
     color: var(--button-active-text-color);
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link {
     color: var(--link-color);
     text-decoration: none;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .link:hover, .link:focus {
     color: var(--link-active-color);
     fill: var(--link-active-color);
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link {
@@ -204,6 +220,10 @@ h2 {
     line-height: var(--header-link-line-height);
     display: inline;
     margin-right: 46px;
+}
+
+.header-link.phone {
+    margin-right: 0;
 }
 
 .portfolio-picture-title {
@@ -220,11 +240,15 @@ h2 {
     padding: 6px 22px;
     margin: 0 3px;
     border-radius: var(--button-border-radius);
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.portfolio-navigation:hover {
+.portfolio-navigation:hover .portfolio-navigation:focus {
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12);
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -240,6 +264,7 @@ h2 {
     font-weight: var(--picture-work-font-weight);
     line-height: var(--picture-work-line-height);
     margin-bottom: 16px;
+    color: #757575;
 }
 
 .background {
@@ -305,8 +330,14 @@ h2 {
     fill: #AFB1B8;
 }
 
-.social-icon:hover > .social {
+.footer-social .social {
     fill: white;
+}
+
+.social-icon:hover > .social, .social-icon:focus > .social {
+    fill: white;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -316,10 +347,15 @@ h2 {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icon:hover {
+.social-icon:hover, .social-icon:focus {
     background-color: #2196F3;
+    cursor: pointer;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-container {
@@ -337,11 +373,16 @@ h2 {
     align-items: center;
     justify-content: center;
     fill: #AFB1B8;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-image-box:hover {
+.client-image-box:hover .client-image-box:focus {
     border-color: #2196F3;
     fill: #2196F3;
+    cursor: pointer;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-container {
@@ -368,14 +409,24 @@ h2 {
 
 .footer .social-icon {
     background-color: rgb(255, 255, 255, 10%);
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer .social-icon:hover {
+.footer .social-icon:hover .social-icon:focus {
     background-color: #2196F3;
+    transition-delay: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .social-container {
     width: 206px;
     display: flex;
     justify-content: space-between;
+}
+
+.background-header {
+    height: var(--header-height);
+    max-width: 1600px;
+    background-image: url("./../images/Img Overlay.png"), url("./../images/tełko.jpg");
 }
