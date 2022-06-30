@@ -43,7 +43,7 @@
     <div class="container flexbox-header">
       <h1 class="title">EFEKTYWNE ROZWIĄZANIA <br>
         DLA WASZEGO BIZNESU</h1>
-      <button class="order-button" type="button">Zamów usługę</button>
+      <button class="order-button" data-modal-open type="button">Zamów usługę</button>
     </div>
   </section>
   <section>
@@ -348,6 +348,11 @@ non sodales dui. Interdum et malesuada</span>
     </div>
   </div>
 </footer>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="close-btn" data-modal-close type="button">X</button>
+  </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
-
 </html>

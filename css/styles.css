@@ -108,14 +108,6 @@ h2 {
     transition-property: border-color;
 }
 
-.portfolio-picture:hover .pop-it {
-    display: block;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: transform;
-    transform: translateY(262px);
-}
-
 .portfolio-picture-text {
     padding: 20px 24px;
 }
@@ -487,23 +479,77 @@ h2 {
     bottom: -28px;
 }
 
+.roll-up {
+    position: relative;
+    overflow: hidden;
+}
+
 .pop-it {
     background-color: rgba(33, 150, 243, 0.9);
     width: 370px;
     height: 294px;
     color: rgba(255, 255, 255, 1);
-    font-size: 18px;
-    padding-top: 49px;
-    padding-left: 24px;
-    padding-right: 24px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     z-index: 100;
     left: 0;
     text-align: center;
-    display: none;
-    /*transition-duration: 250ms;*/
-    /*transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
-    /*transition-property: transform;*/
+    padding-top: 49px;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition-duration: 250ms;
+    font-size: 18px;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
+    transform: translateY(100%);
+}
 
+.portfolio-picture:hover .pop-it {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
+    transform: translateY(0);
+}
+
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: visibility, opacity;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    min-height: 581px;
+    background-color: white;
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: visibility, opacity;
 }
